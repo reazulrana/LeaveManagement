@@ -1,0 +1,4 @@
+﻿server : mail.rangs.com.bd
+SSL TRUE
+PORT- 443
+

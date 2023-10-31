@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{702C2603-EB06-4E6C-82BB-3F434D318284}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Payroll</RootNamespace>
+    <AssemblyName>Payroll</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MyLibrary">
+      <HintPath>..\..\..\C# Beginners Tutorial\MyCustomLibrary\CustomLibrary\bin\Debug\MyLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cenum.cs" />
+    <Compile Include="DateRange.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackupDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackupDatabase.Designer.cs">
+      <DependentUpon>frmBackupDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateMail.Designer.cs">
+      <DependentUpon>frmCreateMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditContact.Designer.cs">
+      <DependentUpon>frmEditContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditLeaveDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditLeaveDetails.Designer.cs">
+      <DependentUpon>frmEditLeaveDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditNIDDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditNIDDetails.Designer.cs">
+      <DependentUpon>frmEditNIDDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMail.Designer.cs">
+      <DependentUpon>frmMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenReport.Designer.cs">
+      <DependentUpon>frmOpenReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRestoreDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRestoreDatabase.Designer.cs">
+      <DependentUpon>frmRestoreDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowImage.Designer.cs">
+      <DependentUpon>frmShowImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacerLibrary\formEnums.cs" />
+    <Compile Include="frmAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEdit.Designer.cs">
+      <DependentUpon>frmAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContact.Designer.cs">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpList.Designer.cs">
+      <DependentUpon>frmEmpList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLeave.Designer.cs">
+      <DependentUpon>frmLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewEmployee.Designer.cs">
+      <DependentUpon>frmNewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNIDDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNIDDetails.Designer.cs">
+      <DependentUpon>frmNIDDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacerLibrary\IMainFormFunction.cs" />
+    <Compile Include="InterfacerLibrary\IRefreshEmpList.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEdit.resx">
+      <DependentUpon>frmAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackupDatabase.resx">
+      <DependentUpon>frmBackupDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContact.resx">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateMail.resx">
+      <DependentUpon>frmCreateMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditContact.resx">
+      <DependentUpon>frmEditContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditLeaveDetails.resx">
+      <DependentUpon>frmEditLeaveDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditNIDDetails.resx">
+      <DependentUpon>frmEditNIDDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpList.resx">
+      <DependentUpon>frmEmpList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLeave.resx">
+      <DependentUpon>frmLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMail.resx">
+      <DependentUpon>frmMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewEmployee.resx">
+      <DependentUpon>frmNewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNIDDetails.resx">
+      <DependentUpon>frmNIDDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenReport.resx">
+      <DependentUpon>frmOpenReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRestoreDatabase.resx">
+      <DependentUpon>frmRestoreDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowImage.resx">
+      <DependentUpon>frmShowImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Reports\rptAllEmployeeLeave.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\rptLeaveDetails.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dbPayrollManagement.bak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BLL.ContactExtraInfo.datasource" />
+    <None Include="Properties\DataSources\BLL.Contacts.datasource" />
+    <None Include="Properties\DataSources\BLL.LeaveDetails.datasource" />
+    <None Include="Properties\DataSources\BLL.LeaveDetailsExtraInfo.datasource" />
+    <None Include="Properties\DataSources\BLL.MailList.datasource" />
+    <None Include="Properties\DataSources\BLL.NIDDetails.datasource" />
+    <None Include="Properties\DataSources\BLL.NidDetailsExtraInfo.datasource" />
+    <None Include="Properties\DataSources\BLL.Personal.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13698388621005230997add_business_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_Plus_Sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{720a9679-dcb0-4349-abec-1fd2dc99fe2b}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{debc9794-d940-4722-89e3-5faf6dc5a466}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmailSMSLibrary\EmailSMSLibrary.csproj">
+      <Project>{9184220c-2192-48e8-a511-d026997a8951}</Project>
+      <Name>EmailSMSLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImageLibrary\ImageLibrary.csproj">
+      <Project>{8a4d7d50-e449-4999-b9f5-681e95f02a5c}</Project>
+      <Name>ImageLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLLibrary\SQLLibrary.csproj">
+      <Project>{f462e319-60a3-4038-8798-7b6c47e46bee}</Project>
+      <Name>SQLLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portrait-blank-male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLose3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_userNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leave-form-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contact-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card-icon-png-transparent-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13698388621005230997add_business_user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registration_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update-Contact-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee-id-card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Settings_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save as_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil Drawing_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_20px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open in Browser_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand Arrow_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login 32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Broom_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash Can_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SendEmail2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send Email1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send Email1%2832px%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send Email1%2820px%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon2.png" />
+    <None Include="Resources\database-restore.png" />
+    <None Include="Resources\Backup Database 1.png" />
+    <None Include="Resources\Attach_32px.png" />
+    <None Include="Resources\Open in Browser_20px1.png" />
+    <None Include="Resources\List_32px.png" />
+    <None Include="Resources\Pass Fail_64px.png" />
+    <None Include="Resources\User Groups_32px.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
